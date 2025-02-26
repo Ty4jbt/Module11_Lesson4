@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import axios from "axios";
 import md5 from "md5";
+import "../styles/CharacterDetails.css";
 
 const CharacterDetails = () => {
     const { characterId } = useParams();

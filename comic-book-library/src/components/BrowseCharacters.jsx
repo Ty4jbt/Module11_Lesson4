@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import md5 from 'md5';
+import '../styles/BrowseCharacters.css';
 
 const BrowseCharacters = () => {
     const [characters, setCharacters] = useState([]);

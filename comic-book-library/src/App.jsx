@@ -4,7 +4,7 @@ import './App.css'
 import Home from './components/Home'
 import BrowseCharacters from './components/BrowseCharacters'
 import CharacterDetails from './components/CharacterDetails'
-// import Comics from './components/Comics'
+import Comics from './components/Comics'
 import NavBar from './components/NavBar'
 
 function App() {
@@ -18,7 +18,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/characters" element={<BrowseCharacters />} />
           <Route path="/characters/:characterId" element={<CharacterDetails />} />
-          {/* <Route path="/comics" element={<Comics />} /> */}
+          <Route path="/comics" element={<Comics />} />
         </Routes>
       </main>
     </div>
