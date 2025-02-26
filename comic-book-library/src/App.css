@@ -1,0 +1,386 @@
+:root {
+  --marvel-red: #ED1D24;
+  --marvel-blue: #518CCA;
+  --dark-bg: #202020;
+  --light-bg: #F5F5F5;
+  --text-color: #333;
+  --light-text: #FFF;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--light-bg);
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: var(--marvel-red);
+  color: white;
+  padding: 1rem;
+}
+
+header h1 {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  gap: 2rem;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+nav a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+main {
+  flex: 1;
+  padding: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+footer {
+  background-color: var(--dark-bg);
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: auto;
+}
+
+/* Home Component */
+.home-container {
+  text-align: center;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.hero-section {
+  background-color: var(--marvel-red);
+  color: white;
+  height: 60vh;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://terrigen-cdn-dev.marvel.com/content/prod/1x/theinfinitysaga_1.jpg');
+  background-size: cover;
+  background-position: center;
+  margin: 0;
+  padding: 0;
+}
+
+.hero-content {
+  max-width: 800px;
+  padding: 2rem;
+}
+
+.hero-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.hero-button {
+  display: inline-block;
+  background-color: var(--marvel-red);
+  color: white;
+  text-decoration: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  font-weight: bold;
+  transition: all 0.3s;
+  border: 2px solid var(--marvel-red);
+}
+
+.hero-button:hover {
+  background-color: #c61017;
+  border-color: #c61017;
+  transform: translateY(-3px);
+}
+
+.hero-button.secondary {
+  background-color: transparent;
+  border: 2px solid white;
+}
+
+.hero-button.secondary:hover {
+  background-color: white;
+  color: var(--marvel-red);
+}
+
+.home-content {
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.feature-cards {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 3rem;
+  flex-wrap: wrap;
+}
+
+.feature-card {
+  background-color: white;
+  border-radius: 8px;
+  padding: 2rem;
+  width: 300px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.feature-card:hover {
+  transform: translateY(-10px);
+}
+
+.feature-button {
+  display: inline-block;
+  background-color: var(--marvel-red);
+  color: white;
+  text-decoration: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  margin-top: 1.5rem;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.feature-button:hover {
+  background-color: #c61017;
+}
+
+/* Common Page Components */
+.page-header {
+  background-color: var(--marvel-blue);
+  color: white;
+  width: 100%;
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.page-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 2rem;
+}
+
+/* Browse Characters Component */
+h2 {
+  text-align: center;
+  margin: 1rem;
+}
+
+.browse-characters {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.search-container {
+  margin: 0 0 2rem 0;
+  max-width: 600px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.search-input {
+  width: 100%;
+  padding: 0.75rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.characters-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 2rem;
+  margin: 1rem;
+}
+
+.character-card {
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  color: var(--text-color);
+  transition: transform 0.3s;
+}
+
+.character-card:hover {
+  transform: translateY(-5px);
+}
+
+.character-image {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.character-name {
+  padding: 1rem;
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+.loading,
+.error,
+.no-results {
+  text-align: center;
+  padding: 2rem;
+  font-size: 1.2rem;
+}
+
+/* Character Details Component */
+.character-details {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.character-banner {
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.character-header-content {
+  max-width: 1200px;
+  width: 100%;
+  text-align: center;
+}
+
+.character-header-content h2 {
+  font-size: 3rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.character-content {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.back-button {
+  text-decoration: none;
+  color: var(--marvel-blue);
+  font-weight: bold;
+  display: inline-block;
+  margin-bottom: 1.5rem;
+}
+
+.character-header {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.character-detail-image {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.character-info {
+  flex: 1;
+  min-width: 300px;
+}
+
+.character-info h3 {
+  margin-bottom: 1rem;
+  color: var(--marvel-red);
+}
+
+.character-description {
+  line-height: 1.6;
+}
+
+.character-comics h3 {
+  margin-bottom: 1.5rem;
+  color: var(--marvel-red);
+}
+
+.comics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 1.5rem;
+}
+
+.comic-card {
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.comic-card:hover {
+  transform: translateY(-5px);
+}
+
+.comic-image {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.comic-title {
+  padding: 1rem;
+  font-size: 0.9rem;
+  text-align: center;
+}
